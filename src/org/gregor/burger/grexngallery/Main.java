@@ -7,7 +7,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
-import android.widget.ListView;
+import android.widget.GridView;
 
 public class Main extends Activity implements OnItemClickListener {
     /** Called when the activity is first created. */
@@ -17,7 +17,7 @@ public class Main extends Activity implements OnItemClickListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
         ContentResolver cr = getContentResolver();
-        ListView lv = (ListView) findViewById(R.id.list);
+        GridView lv = (GridView) findViewById(R.id.list);
         
         lv.setFastScrollEnabled(true);
         lv.setAdapter(new LazyListAdapter(getApplicationContext(), cr));

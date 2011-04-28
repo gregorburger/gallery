@@ -108,6 +108,11 @@ public class LazyListAdapter extends BaseAdapter {
 	@Override
 	public View getView(int id, View convert, ViewGroup arg2) {
 		ImageView iv = (ImageView) (convert != null ? convert : new ImageView(context));
+		iv.setImageBitmap(null);
+		iv.setMaxHeight(96);
+		iv.setMaxWidth(96);
+		iv.setMinimumHeight(96);
+		iv.setMinimumWidth(96);
 		loader.enqueue(Pair.create(id, iv));
 		return iv;
 	}
